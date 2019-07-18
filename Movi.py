@@ -8,7 +8,7 @@ def Movimiento(Matriz, posicionx, posiciony):
                 print matrizy,
             print
             
-        Mov = raw_input("¿Hacia donde te quieres mover? \n ") #Pregunta hacia donde se desea mover el usuario
+        Mov = raw_input("ï¿½Hacia donde te quieres mover? \n ") #Pregunta hacia donde se desea mover el usuario
         #MOVIMIENTO A LA DERECHA
 
         cadena =((posicionx,posiciony)for posiciony,  row in enumerate(Matriz)for posicionx,  elemento in enumerate(row) if elemento == "@")
@@ -51,13 +51,13 @@ def Movimiento(Matriz, posicionx, posiciony):
                     
             #Si la posicion es igual a 6 y adelante hay una caja en meta
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx][posiciony + 1] == "*":
-                #muñeco en meta, caja en meta y meta "652"
+                #muï¿½eco en meta, caja en meta y meta "652"
                 if Matriz[posicionx][posiciony + 2] == ".":
                     Matriz[posicionx][posiciony] = "."
                     posiciony+=1
                     Matriz[posicionx][posiciony] = "&"
                     Matriz[posicionx][posiciony + 1] = "*"
-                #muñeco en meta, caja en meta y camino "654"
+                #muï¿½eco en meta, caja en meta y camino "654"
                 elif Matriz[posicionx][posiciony + 2] == " ":
                     Matriz[posicionx][posiciony] = "."
                     posiciony+=1
@@ -79,31 +79,31 @@ def Movimiento(Matriz, posicionx, posiciony):
                     Matriz[posicionx][posiciony] = "&"
                     Matriz[posicionx][posiciony + 1] = "*"
                     
-            #Metas y muñeco consecutivo "622"
+            #Metas y muï¿½eco consecutivo "622"
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx][posiciony + 1] == ".":
                 Matriz[posicionx][posiciony] = "."
                 posiciony+= 1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Movimiento a la derecha si el muñeco esta sobre la meta "024"
+            #Movimiento a la derecha si el muï¿½eco esta sobre la meta "024"
             elif Matriz[posicionx][posiciony + 1] == "." and Matriz[posicionx][posiciony + 2] == " ": 
                 Matriz[posicionx][posiciony] = " "
                 posiciony+= 1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Movimiento a la derecha si hay muñeco en meta y adelante un camino "644"
+            #Movimiento a la derecha si hay muï¿½eco en meta y adelante un camino "644"
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx][posiciony + 1] == " ":
                 Matriz[posicionx][posiciony] = "."
                 posiciony+= 1
                 Matriz[posicionx][posiciony] = "@"
                 
-            #Muñeco en camino y si adelante hay meyta "402"
+            #Muï¿½eco en camino y si adelante hay meyta "402"
             elif Matriz[posicionx][posiciony] == "@" and Matriz[posicionx][posiciony + 1] == ".": 
                 Matriz[posicionx][posiciony] = " "
                 posiciony+=1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Muñeco en meta, adelante hay caja y adelante de la caja hay una meta o camino
+            #Muï¿½eco en meta, adelante hay caja y adelante de la caja hay una meta o camino
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx][posiciony + 1] == "$":
                 if Matriz[posicionx][posiciony + 2] == ".": #612
                     Matriz[posicionx][posiciony] = "."
@@ -140,13 +140,13 @@ def Movimiento(Matriz, posicionx, posiciony):
                     
             #Si la posicion es igual a 6 y adelante hay una caja en meta
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx][posiciony - 1] == "*":
-                #muñeco en meta, caja en meta y meta "652"
+                #muï¿½eco en meta, caja en meta y meta "652"
                 if Matriz[posicionx][posiciony - 2] == ".":
                     Matriz[posicionx][posiciony] = "."
                     posiciony-=1
                     Matriz[posicionx][posiciony] = "&"
                     Matriz[posicionx][posiciony - 1] = "*"
-                #muñeco en meta, caja en meta y camino "654"
+                #muï¿½eco en meta, caja en meta y camino "654"
                 elif Matriz[posicionx][posiciony - 2] == " ":
                     Matriz[posicionx][posiciony] = "."
                     posiciony-=1
@@ -168,31 +168,31 @@ def Movimiento(Matriz, posicionx, posiciony):
                     Matriz[posicionx][posiciony] = "&"
                     Matriz[posicionx][posiciony - 1] = "*"
                     
-            #Metas y muñeco consecutivo "622"
+            #Metas y muï¿½eco consecutivo "622"
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx][posiciony - 1] == ".":
                 Matriz[posicionx][posiciony] = "."
                 posiciony-= 1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Movimiento a la derecha si el muñeco esta sobre la meta "024"
+            #Movimiento a la derecha si el muï¿½eco esta sobre la meta "024"
             elif Matriz[posicionx][posiciony - 1] == "." and Matriz[posicionx][posiciony - 2] == " ": 
                 Matriz[posicionx][posiciony] = " "
                 posiciony-= 1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Movimiento a la derecha si hay muñeco en meta y adelante un camino "644"
+            #Movimiento a la derecha si hay muï¿½eco en meta y adelante un camino "644"
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx][posiciony - 1] == " ":
                 Matriz[posicionx][posiciony] = "."
                 posiciony-= 1
                 Matriz[posicionx][posiciony] = "@"
                 
-            #Muñeco en camino y si adelante hay meta "402"
+            #Muï¿½eco en camino y si adelante hay meta "402"
             elif Matriz[posicionx][posiciony] == "@" and Matriz[posicionx][posiciony - 1] == ".": 
                 Matriz[posicionx][posiciony] = " "
                 posiciony-=1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Muñeco en meta, adelante hay caja y adelante de la caja hay una meta o camino
+            #Muï¿½eco en meta, adelante hay caja y adelante de la caja hay una meta o camino
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx][posiciony - 1] == "$":
                 if Matriz[posicionx][posiciony - 2] == ".": #612
                     Matriz[posicionx][posiciony] = "."
@@ -229,13 +229,13 @@ def Movimiento(Matriz, posicionx, posiciony):
                     
             #Si la posicion es igual a 6 y adelante hay una caja en meta
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx - 1][posiciony] == "*":
-                #muñeco en meta, caja en meta y meta "652"
+                #muï¿½eco en meta, caja en meta y meta "652"
                 if Matriz[posicionx - 2][posiciony] == ".":
                     Matriz[posicionx][posiciony] = "."
                     posicionx-=1
                     Matriz[posicionx][posiciony] = "&"
                     Matriz[posicionx - 1][posiciony] = "*"
-                #muñeco en meta, caja en meta y camino "654"
+                #muï¿½eco en meta, caja en meta y camino "654"
                 elif Matriz[posicionx - 2][posiciony] == " ":
                     Matriz[posicionx][posiciony] = "."
                     posicionx-=1
@@ -257,31 +257,31 @@ def Movimiento(Matriz, posicionx, posiciony):
                     Matriz[posicionx][posiciony] = "&"
                     Matriz[posicionx - 1][posiciony] = "*"
                     
-            #Metas y muñeco consecutivo "622"
+            #Metas y muï¿½eco consecutivo "622"
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx - 1][posiciony] == ".":
                 Matriz[posicionx][posiciony] = "."
                 posicionx-= 1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Movimiento hacia arriba si el muñeco esta sobre la meta "024"
+            #Movimiento hacia arriba si el muï¿½eco esta sobre la meta "024"
             elif Matriz[posicionx - 1][posiciony] == "." and Matriz[posicionx - 2][posiciony] == " ": 
                 Matriz[posicionx][posiciony] = " "
                 posicionx-= 1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Movimiento hacia arriba si hay muñeco en meta y adelante un camino "644"
+            #Movimiento hacia arriba si hay muï¿½eco en meta y adelante un camino "644"
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx - 1][posiciony] == " ":
                 Matriz[posicionx][posiciony] = "."
                 posicionx-= 1
                 Matriz[posicionx][posiciony] = "@"
                 
-            #Muñeco en camino y si adelante hay meta "402"
+            #Muï¿½eco en camino y si adelante hay meta "402"
             elif Matriz[posicionx][posiciony] == "@" and Matriz[posicionx - 1][posiciony] == ".": 
                 Matriz[posicionx][posiciony] = " "
                 posicionx-=1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Muñeco en meta, adelante hay caja y adelante de la caja hay una meta o camino
+            #Muï¿½eco en meta, adelante hay caja y adelante de la caja hay una meta o camino
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx - 1][posiciony] == "$":
                 if Matriz[posicionx - 2][posiciony] == ".": #612
                     Matriz[posicionx][posiciony] = "."
@@ -318,13 +318,13 @@ def Movimiento(Matriz, posicionx, posiciony):
                     
             #Si la posicion es igual a 6 y adelante hay una caja en meta
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx + 1][posiciony] == "*":
-                #muñeco en meta, caja en meta y meta "652"
+                #muï¿½eco en meta, caja en meta y meta "652"
                 if Matriz[posicionx + 2][posiciony] == ".":
                     Matriz[posicionx][posiciony] = "."
                     posicionx+=1
                     Matriz[posicionx][posiciony] = "&"
                     Matriz[posicionx + 1][posiciony] = "*"
-                #muñeco en meta, caja en meta y camino "654"
+                #muï¿½eco en meta, caja en meta y camino "654"
                 elif Matriz[posicionx + 2][posiciony] == " ":
                     Matriz[posicionx][posiciony] = "."
                     posicionx+=1
@@ -346,31 +346,31 @@ def Movimiento(Matriz, posicionx, posiciony):
                     Matriz[posicionx][posiciony] = "&"
                     Matriz[posicionx + 1][posiciony] = "*"
                     
-            #Metas y muñeco consecutivo "622"
+            #Metas y muï¿½eco consecutivo "622"
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx + 1][posiciony] == ".":
                 Matriz[posicionx][posiciony] = "."
                 posicionx+= 1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Movimiento hacia abajo si el muñeco esta sobre la meta "024"
+            #Movimiento hacia abajo si el muï¿½eco esta sobre la meta "024"
             elif Matriz[posicionx + 1][posiciony] == "." and Matriz[posicionx + 2][posiciony] == " ":
                 Matriz[posicionx][posiciony] = " "
                 posicionx+= 1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Movimiento hacia abajo si hay muñeco en meta y adelante un camino "644"
+            #Movimiento hacia abajo si hay muï¿½eco en meta y adelante un camino "644"
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx + 1][posiciony] == " ":
                 Matriz[posicionx][posiciony] = "."
                 posicionx+= 1
                 Matriz[posicionx][posiciony] = "@"
                 
-            #Muñeco en camino y si adelante hay meyta "402"
+            #Muï¿½eco en camino y si adelante hay meyta "402"
             elif Matriz[posicionx][posiciony] == "@" and Matriz[posicionx + 1][posiciony] == ".": 
                 Matriz[posicionx][posiciony] = " "
                 posicionx+=1
                 Matriz[posicionx][posiciony] = "&"
                 
-            #Muñeco en meta, adelante hay caja y adelante de la caja hay una meta o camino
+            #Muï¿½eco en meta, adelante hay caja y adelante de la caja hay una meta o camino
             elif Matriz[posicionx][posiciony] == "&" and Matriz[posicionx + 1][posiciony] == "$":
                 if Matriz[posicionx + 2][posiciony] == ".": #612
                     Matriz[posicionx][posiciony] = "."
@@ -389,7 +389,7 @@ def Movimiento(Matriz, posicionx, posiciony):
                     for b in a:
                         print b,
                     print
-                Mov2 = raw_input("¿Hacia donde te quieres mover? Tu XD \n ")
+                Mov2 = raw_input("ï¿½Hacia donde te quieres mover? Tu XD \n ")
                 if Mov2 == "w":
                     Matriz[posicionx][posiciony] = " "
                     posicionx = posicionx - 1
